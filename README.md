@@ -1,2 +1,2 @@
 # faisal-academy
-This a WP REST API build
+This a WordPress REST API build plugin.
