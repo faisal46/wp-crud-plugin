@@ -27,9 +27,11 @@ class Menu {
         $parent_slug = 'faisal-academy';
         $capability = 'manage_options';
 
-        add_menu_page( __( 'faisal Academy', 'faisal-academy' ), __( 'Academy', 'faisal-academy' ), $capability, $parent_slug, [ $this->addressbook, 'plugin_page' ], 'dashicons-welcome-learn-more' );
+        $hook = add_menu_page( __( 'faisal Academy', 'faisal-academy' ), __( 'Academy', 'faisal-academy' ), $capability, $parent_slug, [ $this->addressbook, 'plugin_page' ], 'dashicons-welcome-learn-more' );
         add_submenu_page( $parent_slug, __( 'Address Book', 'faisal-academy' ), __( 'Address Book', 'faisal-academy' ), $capability, $parent_slug, [ $this->addressbook, 'plugin_page' ] );
         add_submenu_page( $parent_slug, __( 'Settings', 'faisal-academy' ), __( 'Settings', 'faisal-academy' ), $capability, 'faisal-academy-settings', [ $this, 'settings_page' ] );
+        
+        add_action( 'admin_head-' . $hook, [ $this, 'enqueue_assets' ] );
     }
 
     /**
@@ -39,5 +41,14 @@ class Menu {
      */
     public function settings_page() {
         echo 'Settings Page';
+    }
+
+    /**
+     * Enqueue scripts and styles
+     *
+     * @return void
+     */
+    public function enqueue_assets() {
+        wp_enqueue_style( 'academy-admin-style' );
     }
 }

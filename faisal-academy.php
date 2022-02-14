@@ -78,6 +78,8 @@ final class Faisal_Academy{
      */
     public function init_plugin() {
 
+        new Faisal\Academy\Assets();
+
         if ( is_admin() ) {
             new Faisal\Academy\Admin();
         } else {

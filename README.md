@@ -1,2 +1,2 @@
 # faisal-academy
-This is WordPress plugin are build the form crud ( insert, edit and delete ) show the wp list table.
+This is WordPress OOP structure plugin are build the form crud ( insert, edit and delete ) show the wp list table.
