@@ -1,0 +1,20 @@
+{
+    "name": "faisal46/faisal-academy",
+    "description": "Rest API for Faisal Academy",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Md. Faisal Amir Mostafa",
+            "email": "faisalamirmostafa@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Faisal\\Academy\\": "includes/"
+        },
+        "files": [ "includes/functions.php" ]
+    }
+}
