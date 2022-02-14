@@ -1,2 +1,2 @@
 # faisal-academy
-This a WordPress REST API build plugin.
+A plugin are form crud ( insert, edit and delete ) show the wp list table.
