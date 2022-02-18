@@ -80,6 +80,10 @@ final class Faisal_Academy{
 
         new Faisal\Academy\Assets();
 
+        if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+            new Faisal\Academy\Ajax();
+        }
+
         if ( is_admin() ) {
             new Faisal\Academy\Admin();
         } else {

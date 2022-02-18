@@ -62,10 +62,10 @@ class Addressbook {
             wp_die( 'Are you cheating?' );
         }
 
-        $id      = isset( $_POST['id'] ) ? intval( $_POST['id'] ) : 0;
-        $name    = isset( $_POST['name'] ) ? sanitize_text_field( $_POST['name'] ) : '';
-        $address = isset( $_POST['address'] ) ? sanitize_textarea_field( $_POST['address'] ) : '';
-        $phone   = isset( $_POST['phone'] ) ? sanitize_text_field( $_POST['phone'] ) : '';
+        $id     = isset( $_POST['id'] ) ? intval( $_POST['id'] ) : 0;
+        $name   =        isset( $_POST['name'] ) ? sanitize_text_field( $_POST['name'] ) : '';
+        $address= isset( $_POST['address'] ) ? sanitize_textarea_field( $_POST['address'] ) : '';
+        $phone  = isset( $_POST['phone'] ) ? sanitize_text_field( $_POST['phone'] ) : '';
 
         if ( empty( $name ) ) {
             $this->errors['name'] = __( 'Please provide a name', 'faisal-academy' );
